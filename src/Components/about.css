@@ -1,0 +1,53 @@
+
+.card-hover-effect {
+  transition: transform 0.3s;
+}
+
+.card-hover-effect:hover {
+  transform: scale(1.05);
+;
+}
+
+.caro{
+    display: flex;
+    margin: 2px  ;
+}
+.contact-section{
+background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+  
+.boarding {
+    border-radius: 8px; /* Adds rounded corners to the border */
+  padding: 10px; /* Adds some padding to the element */
+}
+
+/* YourComponent.css */
+.heading {
+    
+    text-align: center;
+
+    padding: 10px;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+  
+  .heading:hover {
+    border-color: #f39c12; /* Change the border color on hover */
+    background-color: rgba(0, 0, 0, 0.4); /* Change the background color on hover */
+    cursor: pointer; /* Show a pointer cursor on hover */
+  }
+  
+
+  .opac {
+    background-color: rgba(0, 0, 0, 0.2);
+
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .opac:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  

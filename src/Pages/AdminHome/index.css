@@ -1,0 +1,17 @@
+table {
+  border: 1px solid black;
+  width: 1000px;
+}
+th {
+  width: 900px;
+}
+
+.card-title {
+  text-align: left;
+  margin-left: 5px;
+  margin-top: 15px;
+}
+
+.card-body {
+  margin: 5px;
+}

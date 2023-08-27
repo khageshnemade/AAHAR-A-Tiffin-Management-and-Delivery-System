@@ -1,0 +1,32 @@
+
+
+.carousel img {
+  width: 100%; /* Ensure images fit within the carousel */
+  height: 100%;
+  
+}
+
+.nav-link {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px; /* Add 'px' unit here */
+  font-weight: bold;
+  color: white;
+}
+.carousel {
+  margin: 0 auto; /* Center the carousel horizontally */
+  padding: 0;
+
+  width: 100%;
+  overflow: hidden; /* Hide any overflowed content */
+  position: relative; /* Ensure proper positioning */
+}  
+
+
+@media only screen and (max-width: 1360px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+  /* For smaller screens */
+  .carousel {
+    width: 100%;
+  /* Adjust height for smaller screens */
+  }
+}
