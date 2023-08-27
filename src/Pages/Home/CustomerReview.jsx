@@ -11,7 +11,7 @@ import surbhi from "./img/surbhi.jpeg";
 export default function () {
   return (
     <div className="bg-light">
-      <h1 className="text-center text-center"> Customer Reviews</h1>
+      <h1 className="text-center text-center heading"> Customer Reviews</h1>
 
       <div className="row mx-auto ">
         <div className="card mx-auto my-2" style={{ width: "18rem" }}>

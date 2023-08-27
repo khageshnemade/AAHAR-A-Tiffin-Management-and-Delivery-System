@@ -13,7 +13,7 @@ export default function Help() {
     <div className="bgclass ">
       <Navbar />
       <div style={{ minHeight: "15vh", maxHeight: "50vh", margin: "auto" }}>
-        <h1 className="text-center  mb-3">Help</h1>
+        <h1 className="text-center  mb-3 heading">Help</h1>
       </div>
       <div className="row">
         <div className="col-md-3 col-sm-6 mb-2">
@@ -121,6 +121,13 @@ export default function Help() {
           </div>
         </div>
       </div>
+      <a
+        href="#"
+        className="fixed-bottom btn btn-success text-white"
+        style={{ width: "100px" }}
+      >
+        GoToTop
+      </a>
       <Footer />
     </div>
   );

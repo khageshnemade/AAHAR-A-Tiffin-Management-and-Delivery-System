@@ -30,7 +30,7 @@ const Footer = () => {
                   <div className="col-md-6 ">
                     <div className="logo-part">
                       <div className="d-flex ">
-                        <Link to="/home">
+                        <Link to="/home" className="hov">
                           <h2 style={{ color: "white" }}>Aahar</h2>
                         </Link>
 
@@ -46,7 +46,7 @@ const Footer = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="col-md-6 px-4">
+                  <div className="col-md-6 px-4 hov">
                     <Link to="/Aboutus">
                       {" "}
                       <h4 style={{ color: "white" }}> About</h4>
@@ -54,14 +54,18 @@ const Footer = () => {
 
                     <a
                       href="/help"
-                      className="btn-footer"
+                      className="btn-footer hov"
                       style={{ fontSize: "15px" }}
                     >
                       {" "}
                       More Info{" "}
                     </a>
                     <br />
-                    <Link to="/contact" style={{ color: "white" }}>
+                    <Link
+                      to="/contact"
+                      style={{ color: "white" }}
+                      className="hov"
+                    >
                       Contact Us
                     </Link>
                   </div>
@@ -73,7 +77,9 @@ const Footer = () => {
                     <div className="row ">
                       <div className="col-md-6">
                         <ul>
-                          <h4> Quick Links</h4>
+                          <li>
+                            <h4> Quick Links</h4>
+                          </li>
                           <li>
                             {" "}
                             <Link to="/home">Home</Link>
@@ -119,7 +125,7 @@ const Footer = () => {
                   </div>
                   <div className="col-md-6 col-sm-12">
                     <div className="d-flex flex-column ">
-                      <Link to="#" style={{ color: "white" }}>
+                      <Link to="#" style={{ color: "white" }} className="hov">
                         <h4>Newsletter</h4>
                       </Link>
                       <div className=" social mt-2 mb-2 d-flex flex-column flex-md-row ">

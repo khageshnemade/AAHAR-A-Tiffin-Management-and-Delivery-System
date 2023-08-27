@@ -29,7 +29,10 @@ const Home = () => {
       </div>
       <br />
       <br />
-      <img src={delivery} alt="" width="100%" />
+      <div style={{ height: "auto" }}>
+        {" "}
+        <img src={delivery} alt="" width="100%" />
+      </div>
       {flag === "true" && <AboutUs />}
 
       <DeliveryMarquee />

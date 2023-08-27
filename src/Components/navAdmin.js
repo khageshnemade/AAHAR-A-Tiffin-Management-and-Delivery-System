@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "./NavBar.css";
 const NavAdmin = () => {
   const navigate = useNavigate();
   const Logout = () => {
@@ -14,7 +15,7 @@ const NavAdmin = () => {
         className="navbar navbar-expand-lg navbar-light bg-grey"
         style={{ backgroundColor: "#4caf95", height: "" }}
       >
-        <Link className="nav-link" to="/Admin">
+        <Link className="nav-link hov" to="/Admin">
           <h2>
             <b>Admin Panel</b>
           </h2>

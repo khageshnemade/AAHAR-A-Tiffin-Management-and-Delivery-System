@@ -23,7 +23,7 @@ const Aboutus = () => {
 
       <div className="" style={{ background: "#cb5858cb" }}>
         <h1
-          className=" text-white "
+          className=" text-white heading"
           style={{
             display: "flex",
             alignItems: "center",
@@ -302,6 +302,13 @@ const Aboutus = () => {
             </div>
           </div>
         </section>
+        <a
+          href="#"
+          className="fixed-bottom btn btn-success text-white"
+          style={{ width: "100px" }}
+        >
+          GoToTop
+        </a>
         <Footcomponent />
       </div>
     </>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./NavBar.css";
 const Navbar = () => {
   return (
     <div className="">
@@ -7,14 +8,16 @@ const Navbar = () => {
         style={{ backgroundColor: "#4caf95", height: "px" }}
       >
         <ul></ul>
-        <Link
-          className="navbar-brand"
-          to={"/"}
-          style={{ fontWeight: "bold", height: 50, color: "white" }}
-        >
-          <h2>Aahar</h2>
-        </Link>
-        <i className="fas fa-utensils fa-2x" style={{ padding: 5 }}></i>
+        <div className="d-flex text-start">
+          <Link
+            className="navbar-brand hov"
+            to={"/"}
+            style={{ fontWeight: "bold", height: 50, color: "wheat" }}
+          >
+            <h2>Aahar</h2>
+          </Link>
+          <i className="fas fa-utensils fa-2x" style={{ padding: 5 }}></i>
+        </div>
 
         <ul>{""}</ul>
         <button
@@ -50,31 +53,35 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link "
-                to="/help"
-                style={{ color: "wheat" }}
-              >
-               Help
+              <Link className="nav-link " to="/help" style={{ color: "wheat" }}>
+                Help
               </Link>
             </li>
           </ul>
+          <ul className="navbar-nav me-right mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link
+                className="nav-link"
+                to="/Signin"
+                style={{ color: "wheat" }}
+              >
+                <i class="bi bi-solid bi-person-circle"></i>
+                Signin
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="nav-link"
+                to="/signup"
+                style={{ color: "wheat" }}
+              >
+                <i class="bi bi-solid bi-person-circle"></i> SignUp
+              </Link>
+            </li>
+
+            <ul>{""}</ul>
+          </ul>
         </div>
-
-        <ul className="navbar-nav me-right mb-2 mb-lg-0">
-          <li className="nav-item">
-            <Link className="nav-link" to="/Signin" style={{ color: "wheat" }}>
-              Signin
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/signup" style={{ color: "wheat" }}>
-              <i class="bi bi-solid bi-person-circle"></i> SignUp
-            </Link>
-          </li>
-
-          <ul>{""}</ul>
-        </ul>
       </nav>
     </div>
   );

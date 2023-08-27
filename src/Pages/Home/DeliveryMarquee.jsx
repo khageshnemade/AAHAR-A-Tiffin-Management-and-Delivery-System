@@ -16,7 +16,7 @@ export default function DeliveryMarquee() {
           height: "30vh",
 
           backgroundImage: `url(${backgroundImg})`,
-          backgroundSize: "no-repeat",
+          backgroundSize: "cover",
         }}
       >
         <img

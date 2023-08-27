@@ -227,6 +227,13 @@ function Contact() {
           </section>
         </section>
       </>
+      <a
+        href="#"
+        className="fixed-bottom btn btn-success text-white"
+        style={{ width: "100px" }}
+      >
+        GoToTop
+      </a>
     </>
   );
 }
