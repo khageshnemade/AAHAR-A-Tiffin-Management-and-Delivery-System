@@ -23,9 +23,30 @@ const Signup = () => {
   };
 
   const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
+  //   emailjs
+  //     .sendForm(
+  //       "service_0b5zcor",
+  //       "template_2855mza",
+
+  //       form.current,
+  //       // "RVqxeUk9znU9IGB58"
+  //       "-Dpi6T-8PP4hVQvQN"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
     emailjs
       .sendForm(
         "service_0b5zcor",
@@ -43,11 +64,6 @@ const Signup = () => {
           console.log(error.text);
         }
       );
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
     // Validate form fields before submission
     if (!validateForm()) {
       return;
@@ -127,6 +143,7 @@ const Signup = () => {
             <div className="textbook">
               <i className="fas fa-user"></i>
               <input
+                name="user_name"
                 placeholder="Enter name"
                 onChange={(e) => {
                   setusername(e.target.value);
@@ -140,6 +157,7 @@ const Signup = () => {
               <i className="fas fa-envelope"></i>
               <input
                 placeholder="Enter Email"
+                name="user_email"
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
