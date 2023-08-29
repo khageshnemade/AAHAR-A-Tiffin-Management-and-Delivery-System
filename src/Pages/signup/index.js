@@ -47,23 +47,7 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_0b5zcor",
-        "template_2855mza",
 
-        form.current,
-        // "RVqxeUk9znU9IGB58"
-        "-Dpi6T-8PP4hVQvQN"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
     // Validate form fields before submission
     if (!validateForm()) {
       return;
@@ -89,6 +73,26 @@ const Signup = () => {
         } else {
           console.log(result.error);
           toast.error(result.error);
+
+          return;
+
+          emailjs
+            .sendForm(
+              "service_0b5zcor",
+              "template_2855mza",
+
+              form.current,
+              // "RVqxeUk9znU9IGB58"
+              "-Dpi6T-8PP4hVQvQN"
+            )
+            .then(
+              (result) => {
+                console.log(result.text);
+              },
+              (error) => {
+                console.log(error.text);
+              }
+            );
         }
       })
       .catch((err) => console.log(err));
