@@ -131,7 +131,7 @@ const Footer = () => {
                       <div className=" social mt-2 mb-2 d-flex flex-column flex-md-row ">
                         <a href="#" className="mx-1 mb-2">
                           <div style={{ fontSize: "25px", color: "#1877F2" }}>
-                            <i class="fab fa-facebook"></i>
+                            <i className="fab fa-facebook"></i>
                           </div>
                         </a>
                         <a href="#" className="mx-1 mb-2">

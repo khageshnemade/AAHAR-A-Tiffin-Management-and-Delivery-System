@@ -62,7 +62,7 @@ const Tiffin = (props) => {
       }}
     >
       <div
-        class="card"
+        className="card"
         style={{
           display: "grid",
           minWidth: "18rem",
@@ -73,12 +73,12 @@ const Tiffin = (props) => {
         }}
       >
         <div
-          class="card-body"
+          className="card-body"
           style={{ position: "relative", padding: 5, color: "white" }}
         >
           <img
             src={config.serverURL + "/images/" + tiffin.tiffinImage}
-            class="card-img-top"
+            className="card-img-top"
             style={{
               height: 250,
               width: "100%",
@@ -88,24 +88,24 @@ const Tiffin = (props) => {
             alt="..."
           />
           <div style={{ marginTop: 20, height: 100 }}>
-            <h5 class="card-title">{tiffin.tiffinName}</h5>
-            <p class="card-text">Description : {tiffin.description}</p>
+            <h5 className="card-title">{tiffin.tiffinName}</h5>
+            <p className="card-text">Description : {tiffin.description}</p>
           </div>
           <div className="row">
             <div className="col">
               <h5 className="card-title">Price : {tiffin.tiffinPrice}</h5>
             </div>
             <div className="col">
-              <div class="d-grid gap-2 d-md-flex justify-content-md-end borderRadius-20">
+              <div className="d-grid gap-2 d-md-flex justify-content-md-end borderRadius-20">
                 <button
-                  class="btn btn-primary"
+                  className="btn btn-primary"
                   type="button"
                   onClick={EditTiffin}
                 >
                   Edit Tiffin
                 </button>
                 <button
-                  class="btn btn-danger"
+                  className="btn btn-danger"
                   type="button"
                   onClick={DeleteTiffin}
                 >

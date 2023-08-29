@@ -100,9 +100,9 @@ const Order = () => {
   };
 
   return (
-    <div class="row">
-      <div class="col" />
-      <div class="col">
+    <div className="row">
+      <div className="col" />
+      <div className="col">
         <h1
           style={{ alignContent: "center", color: "white" }}
           className="title"
@@ -194,7 +194,7 @@ const Order = () => {
           </div>
         </div>
       </div>
-      <div class="col" />
+      <div className="col" />
     </div>
   );
 };

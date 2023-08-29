@@ -65,7 +65,7 @@ const Navbar = () => {
                 to="/Signin"
                 style={{ color: "wheat" }}
               >
-                <i class="bi bi-solid bi-person-circle"></i>
+                <i className="bi bi-solid bi-person-circle"></i>
                 Signin
               </Link>
             </li>
@@ -75,7 +75,7 @@ const Navbar = () => {
                 to="/signup"
                 style={{ color: "wheat" }}
               >
-                <i class="bi bi-solid bi-person-circle"></i> SignUp
+                <i className="bi bi-solid bi-person-circle"></i> SignUp
               </Link>
             </li>
 

@@ -210,91 +210,91 @@ const Aboutus = () => {
 
             <h1 className="heading">Our Team</h1>
 
-            <div class="row justify-content-center mt-4 heading">
-              <div class="col-md-auto col-sm-4 mb-4 h-100 card-hover-effect">
-                <div class="bg-white rounded shadow-sm py-5 px-4">
+            <div className="row justify-content-center mt-4 heading">
+              <div className="col-md-auto col-sm-4 mb-4 h-100 card-hover-effect">
+                <div className="bg-white rounded shadow-sm py-5 px-4">
                   <img
                     src={Shubhanshu}
                     alt=""
                     width="100"
-                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                   />
-                  <h5 class="mb-0">
+                  <h5 className="mb-0">
                     Shubhanshu <br />
                     Jaiswal
                   </h5>
-                  <span class="small text-uppercase text-muted">
+                  <span className="small text-uppercase text-muted">
                     CEO - Founder
                   </span>
                 </div>
               </div>
 
-              <div class="col-md-auto col-sm-4 mb-4 h-100 card-hover-effect">
-                <div class="bg-white rounded shadow-sm py-5 px-4">
+              <div className="col-md-auto col-sm-4 mb-4 h-100 card-hover-effect">
+                <div className="bg-white rounded shadow-sm py-5 px-4">
                   <img
                     src={shweta}
                     alt=""
                     width="100"
-                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                   />
-                  <h5 class="mb-0">
+                  <h5 className="mb-0">
                     Shweta
                     <br /> Bhosale
                   </h5>
-                  <span class="small text-uppercase text-muted">
+                  <span className="small text-uppercase text-muted">
                     CEO - Founder
                   </span>
                 </div>
               </div>
-              <div class="col-md-auto col-sm-4 mb-4 h-100 card-hover-effect">
-                <div class="bg-white rounded shadow-sm py-5 px-4">
+              <div className="col-md-auto col-sm-4 mb-4 h-100 card-hover-effect">
+                <div className="bg-white rounded shadow-sm py-5 px-4">
                   <img
                     src={Amit}
                     alt=""
                     width="100"
-                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                   />
-                  <h5 class="mb-0">
+                  <h5 className="mb-0">
                     Amit
                     <br /> Danole
                   </h5>
-                  <span class="small text-uppercase text-muted">
+                  <span className="small text-uppercase text-muted">
                     CEO - Founder
                   </span>
                 </div>
               </div>
 
-              <div class="col-md-auto col-sm-4 mb-4 h-100 card-hover-effect">
-                <div class="bg-white rounded shadow-sm py-5 px-4">
+              <div className="col-md-auto col-sm-4 mb-4 h-100 card-hover-effect">
+                <div className="bg-white rounded shadow-sm py-5 px-4">
                   <img
                     src={jyoti}
                     alt=""
                     width="100"
-                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                   />
-                  <h5 class="mb-0">
+                  <h5 className="mb-0">
                     Jyoti
                     <br /> Jadhav
                   </h5>
-                  <span class="small text-uppercase text-muted">
+                  <span className="small text-uppercase text-muted">
                     CEO - Founder
                   </span>
                 </div>
               </div>
 
-              <div class="col-md-auto col-sm-4 mb-4 h-100 card-hover-effect">
-                <div class="bg-white rounded shadow-sm py-5 px-4">
+              <div className="col-md-auto col-sm-4 mb-4 h-100 card-hover-effect">
+                <div className="bg-white rounded shadow-sm py-5 px-4">
                   <img
                     src={khagesh}
                     alt=""
                     width="100"
-                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                   />
-                  <h5 class="mb-0">
+                  <h5 className="mb-0">
                     Khagesh
                     <br /> Nemade
                   </h5>
-                  <span class="small text-uppercase text-muted">
+                  <span className="small text-uppercase text-muted">
                     CEO - Founder
                   </span>
                 </div>

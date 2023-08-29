@@ -224,7 +224,7 @@ const Signup = () => {
             </div>
 
             <div className="textbook">
-              <i class="fas fa-fingerprint"></i>
+              <i className="fas fa-fingerprint"></i>
               <input
                 placeholder="Enter Adhar No."
                 onChange={(e) => {
