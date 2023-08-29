@@ -1,75 +1,93 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import "./index.css";
-// import { toast } from 'react-toastify'
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useNavigate } from "react-router";
-import { URL } from "../../config";
+import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 import Navbar from "../../Components/navHome";
-import Footcomponent from "../../Components/footer";
-import jwt from "jwt-decode";
-import { borderLeft, color, fontWeight } from "@mui/system";
-import { red } from "@mui/material/colors";
 import config from "../../config";
+import "./index.css";
 
 const Signin = () => {
+  useEffect(() => {
+    const body = {
+      email: Cookies.get("email"),
+      password: Cookies.get("password"),
+    };
+
+    const url = config.serverURL + "/signin";
+
+    axios
+      .post(url, body)
+      .then((response) => {
+        const result = response.data;
+        // Redirect based on role
+        if (result.data.role === "ROLE_ADMIN") {
+          navigate("/Admin", { logout });
+        } else if (result.data.role === "ROLE_DELIVERYBOY") {
+          navigate("/Delivery", { logout });
+        } else {
+          navigate("/showTiffin", { logout });
+        }
+      })
+      .catch((err) => err);
+  }, []);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
+  const logout = () => {
+    Cookies.remove("email");
+    Cookies.remove("password");
+    // Clear any other cookies you might have set
+    // Redirect to the login page or perform other actions
+  };
+
   const signinUser = () => {
-    if (email.length == 0) {
-      toast.warning("please enter email");
-    } else if (password.length == 0) {
-      toast.warning("please enter password");
+    if (email.length === 0) {
+      toast.warning("Please enter email");
+    } else if (password.length === 0) {
+      toast.warning("Please enter password");
     } else {
       const body = {
         email,
         password,
       };
 
-      // url to make signin api call
-      const url = config.serverURL + `/signin`;
+      const url = config.serverURL + "/signin";
 
-      // make api call using axios
-      axios.post(url, body).then((response) => {
-        // get the server result
-        const result = response.data;
-        console.log(result);
+      axios
+        .post(url, body)
+        .then((response) => {
+          const result = response.data;
 
-        if (result["status"] == "success") {
-          // toast.success('Welcome to the application')
-          const payload = jwt(result["data"].jwt);
-          localStorage["id"] = payload["jti"];
-          console.log(payload["jti"]);
-          console.log("JWT : ", result["data"].jwt);
-          // get the data sent by server
-          const { userId } = result["data"];
+          if (result.status === "success") {
+            // Set cookies
+            Cookies.set("email", email);
 
-          // persist the logged in user's information for future use
-          // sessionStorage['id'] = userId
-          // console.log(sessionStorage['id'])
-          // sessionStorage['loginStatus'] = 1
-          // console.log('Role :  ', result['data'].authorities[0].authority)
-          localStorage["jwt"] = result["data"].jwt;
-          localStorage["loginStatus"] = 1;
-          console.log("JWT : ", result["data"].jwt);
-          const message = "Welcome to Aahar";
-          if (result["data"].role == "ROLE_ADMIN") {
-            navigate("/Admin", { state: { message } });
-          } else if (result["data"].role == "ROLE_DELIVERYBOY") {
-            navigate("/Delivery", { state: { message } });
-          } else navigate("/showTiffin", { state: { message } });
-          // navigate to home component
-        } else {
-          toast.error("Invalid user name or password");
-        }
-      });
+            Cookies.set("password", password);
+            console.log(email, password);
+
+            // Redirect based on role
+            if (result.data.role === "ROLE_ADMIN") {
+              navigate("/Admin", { logout });
+            } else if (result.data.role === "ROLE_DELIVERYBOY") {
+              navigate("/Delivery", { logout });
+            } else {
+              navigate("/showTiffin", { logout });
+            }
+          } else {
+            toast.error("Invalid username or password");
+          }
+        })
+        .catch((error) => {
+          console.error("Error during signin:", error);
+          toast.error("An error occurred during signin");
+        });
     }
   };
 

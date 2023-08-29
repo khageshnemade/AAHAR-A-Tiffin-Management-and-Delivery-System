@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./NavBar.css";
+import Cookies from "js-cookie";
+
 const NavUser = () => {
   const navigate = useNavigate();
   const Logout = () => {
+    Cookies.remove("email");
+    Cookies.remove("password");
     sessionStorage["id"] = null;
     console.log(sessionStorage["id"]);
     sessionStorage["loginStatus"] = null;
