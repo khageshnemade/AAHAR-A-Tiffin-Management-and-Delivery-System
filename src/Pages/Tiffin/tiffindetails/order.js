@@ -25,6 +25,8 @@ const Order = () => {
   }, [endDate, startDate]);
   const today = new Date().toISOString().split("T")[0]; // Get today's date in 'yyyy-mm-dd' format
   const save = () => {
+    console.log("Name : " + name);
+
     const userId = parseInt(localStorage["id"]);
     console.log(userId);
     if (userId == undefined) {

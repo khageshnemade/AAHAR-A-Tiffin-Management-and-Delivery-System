@@ -79,15 +79,19 @@ const Signup = () => {
     };
     const url = config.serverURL + "/signup";
 
-    axios.post(url, body).then((response) => {
-      const result = response.data;
-      if (result.status === "success") {
-        navigate("/home");
-        toast.info("User Registered Successfully");
-      } else {
-        toast.error(result.error);
-      }
-    });
+    axios
+      .post(url, body)
+      .then((response) => {
+        const result = response.data;
+        if (result.status === "success") {
+          navigate("/home");
+          toast.info("User Registered Successfully");
+        } else {
+          console.log(result.error);
+          toast.error(result.error);
+        }
+      })
+      .catch((err) => console.log(err));
   };
 
   const validateForm = () => {
@@ -176,10 +180,7 @@ const Signup = () => {
                 }}
                 className="form-control"
               />
-              <button
-                className="btn btn-outline-primary"
-                onClick={toggleShowPassword}
-              >
+              <button className="btn btn-success" onClick={toggleShowPassword}>
                 {showPassword ? "Hide" : "Show"}
               </button>
             </div>

@@ -102,10 +102,7 @@ const Signin = () => {
               }}
               className="form-control"
             />
-            <button
-              className="btn btn-outline-primary"
-              onClick={toggleShowPassword}
-            >
+            <button className="btn btn-success" onClick={toggleShowPassword}>
               {showPassword ? "Hide" : "Show"}
             </button>
           </div>
