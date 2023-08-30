@@ -4,14 +4,13 @@ Version 1.0 approved
 
 ### Prepared By Project Team 02 :
 
-| Name                  | PRN            |
-|-----------------------|----------------|
-| Shubhanshu Jaiswal (PL) | 230340320107  |
-| Shweta Akash Bhosale   | 230340320109  |
-| Khagesh Sunil Nemade   | 230340320047  |
-| Amit Rajendra Danole   | 230340520013  |
-| Jyoti Vaibhav Jadhav   | 230340320044  |
-
+| Name                    | PRN          |
+| ----------------------- | ------------ |
+| Shubhanshu Jaiswal (PL) | 230340320107 |
+| Shweta Akash Bhosale    | 230340320109 |
+| Khagesh Sunil Nemade    | 230340320047 |
+| Amit Rajendra Danole    | 230340520013 |
+| Jyoti Vaibhav Jadhav    | 230340320044 |
 
 The web based “Tiffin Delivery and Management System” project is an attempt to simulate the basic concepts of Tiffin Delivery and Management chain. The system is designed mainly through the perspective of the tiffin provider.
 Customer needs to Sign up and check the menu and order the tiffin as per the requirement for required period. Customer needs to add his/her address where the tiffin needs to be delivered before ordering the tiffin. As per customers requirement he/she must have to do payment for the amount generated for that period according to the chosen tiffin.
@@ -36,7 +35,6 @@ The system encompasses user registration, menu management, tiffin ordering, orde
 ### 2.CLass Diagram
 
 ![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/ae076685-6611-4f79-8c09-7d11efe09f57)
-
 
 ## Docker Command to export and import image to tar
 

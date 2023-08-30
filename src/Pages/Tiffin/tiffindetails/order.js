@@ -52,7 +52,7 @@ const Order = () => {
   const save = (e) => {
     console.log("Enddate : ", e.target);
     e.preventDefault();
-    console.log(e.target.user_email.value);
+    console.log(e.target.order_endDate.value);
     emailjs
       .sendForm(
         "service_gmuhwfg",
@@ -68,9 +68,7 @@ const Order = () => {
           console.log(error.text);
         }
       );
-    console.log("Name : " + name);
-    console.log("CookIEmail : " + Cookies.get("email"));
-
+    console.log(e.target.value);
     const userId = parseInt(localStorage["id"]);
     console.log(userId);
     if (userId == undefined) {
@@ -187,7 +185,6 @@ const Order = () => {
           <div className="mb-3">
             <label
               htmlFor=""
-              name="order_endDate"
               className="label-control"
               style={{ color: "white" }}
             >
@@ -201,6 +198,7 @@ const Order = () => {
               type="date"
               className="form-control"
               placeholder="YYYY-MM-DD"
+              name="order_endDate"
             />
           </div>
 
