@@ -21,10 +21,12 @@ const Aboutus = () => {
     <>
       <Navbar />
 
-      <div className="" style={{ background: "#cb5858cb" }}>
+      <div className="" style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}>
         <h1
           className=" text-white heading"
           style={{
+            margin: "0px",
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -35,26 +37,35 @@ const Aboutus = () => {
           About us
         </h1>
         <p className="text-white text-center">
-          <h3> Welcome to Aahar</h3>
-          <br /> Providing Healthy and Delicious Tiffin Services Since 2023
+          <h3 style={{ backgroundColor: "rgba(0, 0, 0, 0.4)", margin: "0px" }}>
+            {" "}
+            Welcome to Aahar
+            <br />
+          </h3>{" "}
+          <h5 style={{ backgroundColor: "rgba(0, 0, 0, 0.4)", margin: "0px" }}>
+            <br />
+            Providing Healthy and Delicious Tiffin Services Since 2023
+            <br />
+            <br />
+          </h5>
         </p>
-        <p className="text-white text-center"></p>
+
         <br />
-        <section className="contact-section">
-          <div className="row mx-auto">
+        <section className="text-white">
+          <div className="row ">
             <div
               id="carouselExample"
               className="mx-auto col-sm-12 col-md-10 carousel slide"
             >
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <img src={i1} className="d-block w-100" alt="..." />
+                  <img src={i1} className="d-block h-100" alt="..." />
                   <div className="carousel-caption">
                     <h3 className="opac">Food is healthy and hygienic</h3>
                   </div>
                 </div>
                 <div className="carousel-item">
-                  <img src={i2} className="d-block w-100" alt="..." />
+                  <img src={i2} className="d-block h-100" alt="..." />
                   <div className="carousel-caption">
                     <h3 className="opac">
                       Best Tiffin Centers of the city at one place
@@ -62,7 +73,7 @@ const Aboutus = () => {
                   </div>
                 </div>
                 <div className="carousel-item">
-                  <img src={i3} className="d-block w-100" alt="..." />
+                  <img src={i3} className="d-block h-100" alt="..." />
                   <div className="carousel-caption">
                     <h3 className="opac">
                       Food Delivery from tiffin centers in restaurant style
@@ -97,8 +108,8 @@ const Aboutus = () => {
             </div>
           </div>
 
-          <div className="" style={{ paddingTop: 50, paddingBottom: 50 }}>
-            <p className="m-2  heading">
+          <div className="" style={{ paddingTop: 50 }}>
+            <p className="m-2  heading fs-5">
               We love picky eaters. We love foodies. We love vegetarians. We
               love health freaks. “Is there any dessert?” We love them too. We
               love the ones who call. We even love the ones who order online. We
@@ -133,11 +144,16 @@ const Aboutus = () => {
             <br />
             <br />
 
-            <h1 className="heading">Why us</h1>
+            <h1
+              className="heading"
+              style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
+            >
+              Why us
+            </h1>
 
             <div className="container text-start heading">
               <div className="row">
-                <Card className="col-md-3 col-sm-6 mb-4 card-hover-effect bg-dark text-white mx-auto">
+                <Card className="col-md-3 col-sm-6 card-hover-effect mx-5 bg-dark text-white mx-auto">
                   <Card.Body>
                     <Card.Title>Affordable prices.</Card.Title>
                     <Card.Text>
@@ -148,7 +164,7 @@ const Aboutus = () => {
                   </Card.Body>
                 </Card>
 
-                <Card className="col-md-3 col-sm-6 mb-4 card-hover-effect mx-2 bg-dark text-white mx-auto">
+                <Card className="col-md-3 col-sm-6 card-hover-effect mx-2 bg-dark text-white mx-auto">
                   <Card.Body>
                     <Card.Title>Fresh ingredients.</Card.Title>
                     <Card.Text>
@@ -159,7 +175,7 @@ const Aboutus = () => {
                   </Card.Body>
                 </Card>
 
-                <Card className="col-md-3 col-sm-6 mb-4 card-hover-effect mx-2 bg-dark text-white mx-auto">
+                <Card className="col-md-3 col-sm-6  card-hover-effect mx-2 bg-dark text-white mx-auto">
                   <Card.Body>
                     <Card.Title>Tasty Food.</Card.Title>
                     <Card.Text>
@@ -170,7 +186,7 @@ const Aboutus = () => {
                   </Card.Body>
                 </Card>
 
-                <Card className="col-md-3 col-sm-6 mb-4 card-hover-effect mx-2 bg-dark text-white mx-auto">
+                <Card className="col-md-3 col-sm-6 card-hover-effect mx-2 bg-dark text-white mx-auto">
                   <Card.Body>
                     <Card.Title>Disposable containers.</Card.Title>
                     <Card.Text>
@@ -181,7 +197,7 @@ const Aboutus = () => {
                   </Card.Body>
                 </Card>
 
-                <Card className="col-md-3 col-sm-6 mb-4 card-hover-effect mx-2 bg-dark text-white mx-auto">
+                <Card className="col-md-3 col-sm-6 card-hover-effect mx-2 bg-dark text-white mx-auto">
                   <Card.Body>
                     <Card.Title>
                       No preservatives/ artificial color/pre-cooked gravies.
@@ -194,7 +210,7 @@ const Aboutus = () => {
                   </Card.Body>
                 </Card>
 
-                <Card className="col-md-3 col-sm-6 mb-4 card-hover-effect mx-2 bg-dark text-white mx-auto">
+                <Card className="col-md-3 col-sm-6 card-hover-effect mx-2 bg-dark text-white mx-auto">
                   <Card.Body>
                     <Card.Title>Experienced cooks.</Card.Title>
                     <Card.Text>
@@ -208,9 +224,14 @@ const Aboutus = () => {
 
             <br />
 
-            <h1 className="heading">Our Team</h1>
+            <h1
+              className="heading"
+              style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
+            >
+              Our Team
+            </h1>
 
-            <div className="row justify-content-center mt-4 heading">
+            <div className="row justify-content-center  heading">
               <div className="col-md-auto col-sm-4 mb-4 h-100 card-hover-effect">
                 <div className="bg-white rounded shadow-sm py-5 px-4">
                   <img
@@ -219,12 +240,12 @@ const Aboutus = () => {
                     width="100"
                     className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                   />
-                  <h5 className="mb-0">
+                  <h5 className="mb-0 text-dark">
                     Shubhanshu <br />
                     Jaiswal
                   </h5>
                   <span className="small text-uppercase text-muted">
-                    CEO - Founder
+                    <b>CEO - Founder</b>
                   </span>
                 </div>
               </div>
@@ -237,12 +258,12 @@ const Aboutus = () => {
                     width="100"
                     className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                   />
-                  <h5 className="mb-0">
+                  <h5 className="mb-0 text-dark">
                     Shweta
                     <br /> Bhosale
                   </h5>
                   <span className="small text-uppercase text-muted">
-                    CEO - Founder
+                    <b>CEO - Founder</b>
                   </span>
                 </div>
               </div>
@@ -254,12 +275,12 @@ const Aboutus = () => {
                     width="100"
                     className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                   />
-                  <h5 className="mb-0">
+                  <h5 className="mb-0 text-dark">
                     Amit
                     <br /> Danole
                   </h5>
                   <span className="small text-uppercase text-muted">
-                    CEO - Founder
+                    <b>CEO - Founder</b>
                   </span>
                 </div>
               </div>
@@ -272,12 +293,12 @@ const Aboutus = () => {
                     width="100"
                     className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                   />
-                  <h5 className="mb-0">
+                  <h5 className="mb-0 text-dark">
                     Jyoti
                     <br /> Jadhav
                   </h5>
                   <span className="small text-uppercase text-muted">
-                    CEO - Founder
+                    <b>CEO - Founder</b>
                   </span>
                 </div>
               </div>
@@ -290,12 +311,12 @@ const Aboutus = () => {
                     width="100"
                     className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                   />
-                  <h5 className="mb-0">
+                  <h5 className="mb-0 text-dark">
                     Khagesh
                     <br /> Nemade
                   </h5>
                   <span className="small text-uppercase text-muted">
-                    CEO - Founder
+                    <b>CEO - Founder</b>
                   </span>
                 </div>
               </div>
@@ -309,6 +330,7 @@ const Aboutus = () => {
         >
           GoToTop
         </a>
+
         <Footcomponent />
       </div>
     </>

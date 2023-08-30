@@ -93,25 +93,25 @@ const Navbar = () => {
           </ul>
           <ul className="navbar-nav me-right mb-2 mb-lg-0">
             <li className="nav-item">
-              <button onClick={signinHandle} className="btn fs-5">
-                {" "}
-                <Link className="nav-link" to="/" style={{ color: "wheat" }}>
-                  <i className="bi bi-solid bi-person-circle"></i>
-                  Signin
-                </Link>
-              </button>
+              <Link
+                className="nav-link"
+                to="/"
+                style={{ color: "wheat" }}
+                onClick={signinHandle}
+              >
+                <i className="bi bi-solid bi-person-circle"></i>
+                Signin
+              </Link>
             </li>
             <li>
-              <button className="btn fs-5">
-                {" "}
-                <Link
-                  className="nav-link"
-                  to="/signup"
-                  style={{ color: "wheat" }}
-                >
-                  <i className="bi bi-solid bi-person-circle"></i> SignUp
-                </Link>
-              </button>
+              {" "}
+              <Link
+                className="nav-link"
+                to="/signup"
+                style={{ color: "wheat" }}
+              >
+                <i className="bi bi-solid bi-person-circle"></i> SignUp
+              </Link>
             </li>
 
             <ul>{""}</ul>

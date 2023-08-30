@@ -31,31 +31,44 @@ const TiffinCard = ({ tiffin }) => {
   }, []);
 
   return (
-    <div className="container ">
-      <div className="row">
-        <h1 className="text-center text-white">Tiffins List</h1>
-        {tiffins.map((tiffin, index) => (
-          <div className="col-md-3 col-sm-4 col-lg-3 col-6 mb-2">
-            <div className="tiffin-card">
-              <div className="card-image-wrapper">
-                <img
-                  src={config.serverURL + "/images/" + tiffin.tiffinImage}
-                  className="card-img-top"
-                  alt="Tiffin"
-                />
+    <div>
+      <hr />
 
-                <a href="/signin">
-                  <div className="card-content">
-                    <div className="card-body">
-                      <h5 className="card-title">{tiffin.tiffinName}</h5>
-                      <p className="card-text">{tiffin.description}</p>
+      <h1
+        className="text-center text-white heading"
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
+      >
+        Tiffins List
+      </h1>
+      <hr />
+      <br />
+
+      <br />
+      <div className="container ">
+        <div className="row ">
+          {tiffins.map((tiffin, index) => (
+            <div className="col-md-3 col-sm-4 col-lg-3 col-6 mb-2">
+              <div className="tiffin-card">
+                <div className="card-image-wrapper">
+                  <img
+                    src={config.serverURL + "/images/" + tiffin.tiffinImage}
+                    className="card-img-top"
+                    alt="Tiffin"
+                  />
+
+                  <a href="/signin">
+                    <div className="card-content">
+                      <div className="card-body">
+                        <h5 className="card-title">{tiffin.tiffinName}</h5>
+                        <p className="card-text">{tiffin.description}</p>
+                      </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

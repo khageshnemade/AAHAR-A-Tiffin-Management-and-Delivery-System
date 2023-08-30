@@ -8,8 +8,6 @@ import config from "../../config";
 import "./index.css";
 
 const Signin = () => {
-
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();

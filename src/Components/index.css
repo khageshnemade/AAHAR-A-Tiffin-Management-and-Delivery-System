@@ -16,7 +16,7 @@
   margin: 0 auto; /* Center the carousel horizontally */
   padding: 0;
 
-  width: 100%;
+
   overflow: hidden; /* Hide any overflowed content */
   position: relative; /* Ensure proper positioning */
 }  

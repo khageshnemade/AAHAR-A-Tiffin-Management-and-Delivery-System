@@ -13,21 +13,14 @@ export default function Help() {
     <div className="bgclass ">
       <Navbar />
       <div style={{ minHeight: "15vh", maxHeight: "50vh", margin: "auto" }}>
-        <h1 className="text-center  mb-3 heading">Help</h1>
+        <h1
+          className="text-center  mb-3 heading"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
+        >
+          Help
+        </h1>
       </div>
-      <div className="row">
-        <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card h-100 d-flex flex-column">
-            <div className="card-body">
-              <h5 className="card-title">Track of The Bill Records</h5>
-              <p className="card-text">
-                If you provide tiffin service and you are tired of keeping track
-                of the bill records for each customer then this software is for
-                you.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div className="container row mb-3 mx-auto">
         <div className="col-md-3 col-sm-6 mb-2">
           <div className="card h-100 d-flex flex-column">
             <div className="card-body">

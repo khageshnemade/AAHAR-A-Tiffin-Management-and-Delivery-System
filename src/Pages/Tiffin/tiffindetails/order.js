@@ -6,8 +6,12 @@ import axios from "axios";
 import Address from "./address";
 import { toast } from "react-toastify";
 import config from "../../../config";
+import Cookies from "js-cookie";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Order = () => {
+  const form = useRef();
   const { state } = useLocation();
   const [name, setName] = useState("");
   const navigate = useNavigate();
@@ -24,8 +28,48 @@ const Order = () => {
     getaddress();
   }, [endDate, startDate]);
   const today = new Date().toISOString().split("T")[0]; // Get today's date in 'yyyy-mm-dd' format
-  const save = () => {
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_gmuhwfg",
+        "template_raygh0j",
+        form.current,
+        "a4p8XkFY64kuw_nL9"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const save = (e) => {
+    console.log("Enddate : ", e.target);
+    e.preventDefault();
+    console.log(e.target.user_email.value);
+    emailjs
+      .sendForm(
+        "service_gmuhwfg",
+        "template_raygh0j",
+        form.current,
+        "a4p8XkFY64kuw_nL9"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     console.log("Name : " + name);
+    console.log("CookIEmail : " + Cookies.get("email"));
 
     const userId = parseInt(localStorage["id"]);
     console.log(userId);
@@ -110,7 +154,17 @@ const Order = () => {
           Order Details
         </h1>
 
-        <div className="form">
+        <form onSubmit={save} ref={form}>
+          <div style={{ paddingTop: "30px" }} className="mb-3">
+            EmailId:
+            <input
+              value={Cookies.get("email")}
+              type="text"
+              className="form-control"
+              name="user_email"
+            />
+          </div>
+
           <div style={{ paddingTop: "30px" }} className="mb-3">
             <label
               htmlFor=""
@@ -125,6 +179,7 @@ const Order = () => {
               }}
               min={today}
               type="date"
+              name="order_startDate"
               className="form-control"
             />
           </div>
@@ -132,6 +187,7 @@ const Order = () => {
           <div className="mb-3">
             <label
               htmlFor=""
+              name="order_endDate"
               className="label-control"
               style={{ color: "white" }}
             >
@@ -169,6 +225,7 @@ const Order = () => {
           <div className="mb-3">
             <label
               htmlFor=""
+              name="total"
               className="label-control"
               style={{ color: "white" }}
             >
@@ -185,14 +242,14 @@ const Order = () => {
           </div>
 
           <div style={{ paddingTop: "50px" }} className="mb-3">
-            <button className="btn btn-success" onClick={save}>
+            <button className="btn btn-success" type="submit">
               Add
             </button>
             <Link to="/showTiffin" className="btn btn-danger float-end">
               Cancel
             </Link>
           </div>
-        </div>
+        </form>
       </div>
       <div className="col" />
     </div>

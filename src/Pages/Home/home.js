@@ -38,12 +38,13 @@ const Home = () => {
       <DeliveryMarquee />
 
       <br />
+
+      <TiffinCard />
       <br />
       <br />
+      <br />
+      
       <CustomerReview />
-      <br />
-      <br />
-      <br />
 
       <a
         href="#"
@@ -53,7 +54,6 @@ const Home = () => {
         GoToTop
       </a>
 
-      <TiffinCard />
       <Footcomponent />
     </div>
   );
