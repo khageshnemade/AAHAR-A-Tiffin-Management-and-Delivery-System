@@ -4,10 +4,14 @@ Version 1.0 approved
  Prepared By Project Team 02 :
 
 Name	PRN
-Shubhanshu Jaiswal (PL)	230340320107
+Shubhanshu Jaiswal (PL)	230340320107 
+
 Shweta Akash Bhosale	230340320109
+
 Khagesh Sunil Nemade	230340320047
+
 Amit Rajendra Danole	230340520013
+
 Jyoti Vaibhav Jadhav	230340320044
 
 
@@ -24,3 +28,28 @@ The purpose of the "Tiffin Delivery and Management System" is to streamline the 
 The system encompasses user registration, menu management, tiffin ordering, order status tracking, and administrative functions. It enables secure transactions, menu updates, and real-time delivery tracking, enhancing the overall customer experience.
 ![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/5ce93f43-5a0f-4bf9-95d6-6f585144899b)
 
+
+Appendix A
+
+1.Entity Relationship Diagram
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/a651c77f-02f9-48a5-b543-11bb6d6c94e9)
+
+2.CLass Diagram
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/ae076685-6611-4f79-8c09-7d11efe09f57)
+
+
+
+
+
+
+
+
+
+
+
+2.3.2 Manage Delivery Guys:
+
+1.4	 Delivery Guy: 
+
+
+ 3. Class Diagram
