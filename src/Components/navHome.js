@@ -1,6 +1,39 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./NavBar.css";
+import axios from "axios";
+
+import { useEffect } from "react";
+import Cookies from "js-cookie";
+import config from "../config";
 const Navbar = () => {
+  const navigate = useNavigate();
+  const signinHandle = () => {
+    if (!Cookies.get("email")) {
+      navigate("/signin");
+    }
+    const body = {
+      email: Cookies.get("email"),
+      password: Cookies.get("password"),
+    };
+
+    const url = config.serverURL + "/signin";
+
+    axios
+      .post(url, body)
+      .then((response) => {
+        const result = response.data;
+        // Redirect based on role
+        if (result.data.role === "ROLE_ADMIN") {
+          navigate("/Admin");
+        } else if (result.data.role === "ROLE_DELIVERYBOY") {
+          navigate("/Delivery");
+        } else {
+          navigate("/showTiffin");
+        }
+      })
+      .catch((err) => err);
+  };
+
   return (
     <div className="">
       <nav
@@ -60,23 +93,25 @@ const Navbar = () => {
           </ul>
           <ul className="navbar-nav me-right mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link
-                className="nav-link"
-                to="/Signin"
-                style={{ color: "wheat" }}
-              >
-                <i className="bi bi-solid bi-person-circle"></i>
-                Signin
-              </Link>
+              <button onClick={signinHandle} className="btn fs-5">
+                {" "}
+                <Link className="nav-link" to="/" style={{ color: "wheat" }}>
+                  <i className="bi bi-solid bi-person-circle"></i>
+                  Signin
+                </Link>
+              </button>
             </li>
             <li>
-              <Link
-                className="nav-link"
-                to="/signup"
-                style={{ color: "wheat" }}
-              >
-                <i className="bi bi-solid bi-person-circle"></i> SignUp
-              </Link>
+              <button className="btn fs-5">
+                {" "}
+                <Link
+                  className="nav-link"
+                  to="/signup"
+                  style={{ color: "wheat" }}
+                >
+                  <i className="bi bi-solid bi-person-circle"></i> SignUp
+                </Link>
+              </button>
             </li>
 
             <ul>{""}</ul>

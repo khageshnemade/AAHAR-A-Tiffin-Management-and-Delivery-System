@@ -8,29 +8,7 @@ import config from "../../config";
 import "./index.css";
 
 const Signin = () => {
-  useEffect(() => {
-    const body = {
-      email: Cookies.get("email"),
-      password: Cookies.get("password"),
-    };
 
-    const url = config.serverURL + "/signin";
-
-    axios
-      .post(url, body)
-      .then((response) => {
-        const result = response.data;
-        // Redirect based on role
-        if (result.data.role === "ROLE_ADMIN") {
-          navigate("/Admin", { logout });
-        } else if (result.data.role === "ROLE_DELIVERYBOY") {
-          navigate("/Delivery", { logout });
-        } else {
-          navigate("/showTiffin", { logout });
-        }
-      })
-      .catch((err) => err);
-  }, []);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
