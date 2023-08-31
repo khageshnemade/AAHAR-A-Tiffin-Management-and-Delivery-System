@@ -6,6 +6,8 @@ import { toast } from "react-toastify";
 import Navbar from "../../Components/navHome";
 import config from "../../config";
 import "./index.css";
+import jwt from "jwt-decode";
+
 
 const Signin = () => {
   const [email, setEmail] = useState("");
@@ -47,6 +49,18 @@ const Signin = () => {
 
             Cookies.set("password", password);
             console.log(email, password);
+
+            const payload = jwt(result["data"].jwt);
+            localStorage["id"] = payload["jti"];
+            console.log(payload["jti"]);
+            console.log("JWT : ", result["data"].jwt);
+            // get the data sent by server
+            const { userId } = result["data"];
+  
+            
+            localStorage["jwt"] = result["data"].jwt;
+            localStorage["loginStatus"] = 1;
+            console.log("JWT : ", result["data"].jwt);
 
             // Redirect based on role
             if (result.data.role === "ROLE_ADMIN") {
