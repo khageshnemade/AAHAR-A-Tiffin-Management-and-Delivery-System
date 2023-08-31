@@ -11,15 +11,19 @@ import surbhi from "./img/surbhi.jpeg";
 export default function () {
   return (
     <div className="">
-      <hr />
+      <div
+        style={{ height: "4px", width: "100", backgroundColor: "red" }}
+      ></div>
       <h1
-        className="text-center text-center heading text-white fs-1"
+        className="text-center text-center heading text-white fs-1 mb-0"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
       >
         {" "}
         Customer Reviews
       </h1>
-      <hr />
+      <div
+        style={{ height: "4px", width: "100", backgroundColor: "red" }}
+      ></div>
       <div className="row mx-auto ">
         <div className="card mx-auto my-2" style={{ width: "18rem" }}>
           <img className="card-img-top" src={priyanka} alt="Card image cap" />

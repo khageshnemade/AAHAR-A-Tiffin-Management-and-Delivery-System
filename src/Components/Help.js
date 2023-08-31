@@ -13,16 +13,22 @@ export default function Help() {
     <div className="bgclass ">
       <Navbar />
       <div style={{ minHeight: "15vh", maxHeight: "50vh", margin: "auto" }}>
+        <div
+          style={{ height: "4px", width: "100", backgroundColor: "red" }}
+        ></div>
         <h1
-          className="text-center  mb-3 heading"
+          className="text-center mb-0 heading"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
         >
           Help
         </h1>
+        <div
+          style={{ height: "4px", width: "100", backgroundColor: "red" }}
+        ></div>
       </div>
       <div className="container row mb-3 mx-auto">
         <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card h-100 d-flex flex-column">
+          <div className="card h-100 d-flex flex-column card-hover-effect">
             <div className="card-body">
               <h5 className="card-title">Traditional Pen-Paper</h5>
               <p className="card-text">
@@ -33,7 +39,7 @@ export default function Help() {
           </div>
         </div>
         <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card h-100 d-flex flex-column">
+          <div className="card h-100 d-flex flex-column card-hover-effect">
             <div className="card-body">
               <h5 className="card-title">User Interface</h5>
               <p className="card-text">
@@ -45,7 +51,7 @@ export default function Help() {
           </div>
         </div>
         <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card h-100 d-flex flex-column">
+          <div className="card h-100 d-flex flex-column card-hover-effect">
             <div className="card-body">
               <h5 className="card-title">Payment Records.</h5>
               <p className="card-text">
@@ -58,7 +64,7 @@ export default function Help() {
         </div>
         {/* Repeat the above structure for the remaining cards */}
         <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card h-100 d-flex flex-column">
+          <div className="card h-100 d-flex flex-column card-hover-effect">
             <div className="card-body">
               <h5 className="card-title">Send Bill</h5>
               <p className="card-text">
@@ -69,7 +75,7 @@ export default function Help() {
           </div>
         </div>
         <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card h-100 d-flex flex-column">
+          <div className="card h-100 d-flex flex-column card-hover-effect">
             <div className="card-body">
               <h5 className="card-title">Route Management</h5>
               <p className="card-text">
@@ -80,7 +86,7 @@ export default function Help() {
           </div>
         </div>
         <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card h-100 d-flex flex-column">
+          <div className="card h-100 d-flex flex-column card-hover-effect">
             <div className="card-body">
               <h5 className="card-title">Order Management</h5>
               <p className="card-text">
@@ -91,7 +97,7 @@ export default function Help() {
           </div>
         </div>
         <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card h-100 d-flex flex-column">
+          <div className="card h-100 d-flex flex-column card-hover-effect">
             <div className="card-body">
               <h5 className="card-title">Customer Management</h5>
               <p className="card-text">
@@ -102,7 +108,7 @@ export default function Help() {
           </div>
         </div>
         <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card h-100 d-flex flex-column">
+          <div className="card h-100 d-flex flex-column card-hover-effect">
             <div className="card-body">
               <h5 className="card-title">Product Management</h5>
               <p className="card-text">

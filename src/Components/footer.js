@@ -128,7 +128,7 @@ const Footer = () => {
                       <Link to="#" style={{ color: "white" }} className="hov">
                         <h4>Newsletter</h4>
                       </Link>
-                      <div className=" social mt-2 mb-2 d-flex flex-column flex-md-row ">
+                      <div className=" social mt-2 mb-2 d-flex flex-column flex-md-row mx-auto">
                         <a href="#" className="mx-1 mb-2">
                           <div style={{ fontSize: "25px", color: "#1877F2" }}>
                             <i className="fab fa-facebook"></i>

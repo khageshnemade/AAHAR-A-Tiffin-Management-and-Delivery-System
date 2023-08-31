@@ -22,6 +22,9 @@ const Aboutus = () => {
       <Navbar />
 
       <div className="" style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}>
+        <div
+          style={{ height: "4px", width: "100", backgroundColor: "red" }}
+        ></div>
         <h1
           className=" text-white heading"
           style={{
@@ -36,6 +39,9 @@ const Aboutus = () => {
           {" "}
           About us
         </h1>
+        <div
+          style={{ height: "4px", width: "100", backgroundColor: "red" }}
+        ></div>
         <p className="text-white text-center">
           <h3 style={{ backgroundColor: "rgba(0, 0, 0, 0.4)", margin: "0px" }}>
             {" "}
@@ -143,94 +149,116 @@ const Aboutus = () => {
             </p>
             <br />
             <br />
-
+            <div
+              style={{ height: "4px", width: "100", backgroundColor: "red" }}
+            ></div>
             <h1
-              className="heading"
+              className="heading mb-0"
               style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
             >
               Why us
             </h1>
-
+            <div
+              style={{ height: "4px", width: "100", backgroundColor: "red" }}
+            ></div>
             <div className="container text-start heading">
               <div className="row">
-                <Card className="col-md-3 col-sm-6 card-hover-effect mx-5 bg-dark text-white mx-auto">
-                  <Card.Body>
-                    <Card.Title>Affordable prices.</Card.Title>
-                    <Card.Text>
-                      Customized lunch and dinner tiffin services in Mumbai
-                      start at just Rs.60/-. The food that you eat is healthy,
-                      yummy at the same time it’s affordable.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
+                <div className="col-md-4 col-sm-6 mb-2">
+                  <div className="card h-100 d-flex flex-column text-dark card-hover-effect">
+                    <div className="card-body">
+                      <h5 className="card-title">Affordable prices.</h5>
+                      <p className="card-text">
+                        Customized lunch and dinner tiffin services in Mumbai
+                        start at just Rs.60/-. The food that you eat is healthy,
+                        yummy at the same time it’s affordable.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-                <Card className="col-md-3 col-sm-6 card-hover-effect mx-2 bg-dark text-white mx-auto">
-                  <Card.Body>
-                    <Card.Title>Fresh ingredients.</Card.Title>
-                    <Card.Text>
-                      Everyday fresh vegetable of the best quality are procured
-                      to ensure that the food that you eat is good for your
-                      health.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
+                <div className="col-md-4 col-sm-6 mb-2">
+                  <div className="card h-100 d-flex flex-column text-dark card-hover-effect">
+                    <div className="card-body">
+                      <h5 className="card-title"> Fresh ingredients.</h5>
+                      <p className="card-text">
+                        Everyday fresh vegetable of the best quality are
+                        procured to ensure that the food that you eat is good
+                        for your health.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-                <Card className="col-md-3 col-sm-6  card-hover-effect mx-2 bg-dark text-white mx-auto">
-                  <Card.Body>
-                    <Card.Title>Tasty Food.</Card.Title>
-                    <Card.Text>
-                      Our experienced chefs ensure that the food you eat has the
-                      perfect mix of spices. The food that you eat is not too
-                      spicy or too oily at the same time it’s very tasty.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
+                <div className="col-md-4 col-sm-6 mb-2">
+                  <div className="card h-100 d-flex flex-column text-dark card-hover-effect">
+                    <div className="card-body">
+                      <h5 className="card-title"> Tasty Food.</h5>
+                      <p className="card-text">
+                        Our experienced chefs ensure that the food you eat has
+                        the perfect mix of spices. The food that you eat is not
+                        too spicy or too oily at the same time it’s very tasty.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-                <Card className="col-md-3 col-sm-6 card-hover-effect mx-2 bg-dark text-white mx-auto">
-                  <Card.Body>
-                    <Card.Title>Disposable containers.</Card.Title>
-                    <Card.Text>
-                      Food is packed in disposable plastic containers. All these
-                      containers are carefully packed in a disposable bag. This
-                      ensures that there are no chances of contamination.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
+                <div className="col-md-4 col-sm-6 mb-2">
+                  <div className="card h-100 d-flex flex-column text-dark card-hover-effect">
+                    <div className="card-body">
+                      <h5 className="card-title"> Disposable containers.</h5>
+                      <p className="card-text">
+                        Food is packed in disposable plastic containers. All
+                        these containers are carefully packed in a disposable
+                        bag. This ensures that there are no chances of
+                        contamination.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-                <Card className="col-md-3 col-sm-6 card-hover-effect mx-2 bg-dark text-white mx-auto">
-                  <Card.Body>
-                    <Card.Title>
-                      No preservatives/ artificial color/pre-cooked gravies.
-                    </Card.Title>
-                    <Card.Text>
-                      No artificial preservatives, colors or pre-cooked gravies
-                      to make the food look attractive. The food that you eat is
-                      just like the way food cooked at home.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
+                <div className="col-md-4 col-sm-6 mb-2">
+                  <div className="card h-100 d-flex flex-column text-dark card-hover-effect">
+                    <div className="card-body">
+                      <h5 className="card-title">
+                        {" "}
+                        No preservatives/ artificial color/pre-cooked gravies.
+                      </h5>
+                      <p className="card-text">
+                        No artificial preservatives, colors or pre-cooked
+                        gravies to make the food look attractive. The food that
+                        you eat is just like the way food cooked at home.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-                <Card className="col-md-3 col-sm-6 card-hover-effect mx-2 bg-dark text-white mx-auto">
-                  <Card.Body>
-                    <Card.Title>Experienced cooks.</Card.Title>
-                    <Card.Text>
-                      Our cooks have more than a decade of experience in the
-                      catering industry.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
+                <div className="col-md-4 col-sm-6 mb-2">
+                  <div className="card h-100 d-flex flex-column text-dark card-hover-effect">
+                    <div className="card-body">
+                      <h5 className="card-title"> Experienced cooks.</h5>
+                      <p className="card-text">
+                        Our cooks have more than a decade of experience in the
+                        catering industry.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
             <br />
-
+            <div
+              style={{ height: "4px", width: "100", backgroundColor: "red" }}
+            ></div>
             <h1
-              className="heading"
+              className="heading mb-0"
               style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
             >
               Our Team
             </h1>
-
+            <div
+              style={{ height: "4px", width: "100", backgroundColor: "red" }}
+            ></div>
             <div className="row justify-content-center  heading">
               <div className="col-md-auto col-sm-4 mb-4 h-100 card-hover-effect">
                 <div className="bg-white rounded shadow-sm py-5 px-4">
