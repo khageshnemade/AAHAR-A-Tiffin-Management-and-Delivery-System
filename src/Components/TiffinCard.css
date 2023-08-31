@@ -7,7 +7,8 @@
 .card-image-wrapper {
   position: relative;
   transition: transform 0.3s;
-  width: 100%; /* Set the width to 100% to match the width of .card-content */
+  width: 100%; 
+  height: auto;/* Set the width to 100% to match the width of .card-content */
 }
 
 .card-content {
@@ -28,6 +29,7 @@
 }
 
 .card-img-top {
+  height: 300px;
   transition: transform 0.3s;
 }
 
