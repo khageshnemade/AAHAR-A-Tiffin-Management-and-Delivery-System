@@ -12,10 +12,7 @@ const Address = () => {
   const [locationId, setLocationId] = useState("");
   const navigate = useNavigate();
 
-  // const selectArea=()=>{
-  //     // sessionStorage.setItem("location",{adr.locationId});
-  //     // console.log(sessionStorage.getItem("orderId"))
-  // }
+
   const getaddress = () => {
     const url = config.serverURL + `/deliveryAddress`;
     axios

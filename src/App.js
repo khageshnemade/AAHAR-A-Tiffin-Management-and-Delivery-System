@@ -37,6 +37,8 @@ import DeliveryAddressList from "./Pages/AdminDeliveryAddressMangement/DeliveryA
 import Footcomponent from "./Components/footer";
 import Help from "./Components/Help";
 
+import CityFetcher from "./Components/Location/CityFetcher";
+
 
 function App() {
   return (
@@ -81,6 +83,7 @@ function App() {
           <Route path="/editTiffin" element={<EditTiffin />} />
           <Route path="/tiffinDetailsData" element={<TiffinDetailsData />} />
           <Route path="/addtiffin" element={<AddTiffin />} />
+          <Route path="/locate" element={<CityFetcher />} />
         </Routes>
         {/* <br />
         <br /> 
