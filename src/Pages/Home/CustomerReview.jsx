@@ -25,7 +25,10 @@ export default function () {
         style={{ height: "4px", width: "100", backgroundColor: "red" }}
       ></div>
       <div className="row mx-auto ">
-        <div className="card mx-auto my-2" style={{ width: "18rem" }}>
+        <div
+          className="card mx-auto my-2 card-hover-effect"
+          style={{ width: "18rem" }}
+        >
           <img className="card-img-top" src={priyanka} alt="Card image cap" />
           <div className="card-body">
             <h5 className="card-title">Priyanka Sharma</h5>
@@ -37,7 +40,7 @@ export default function () {
           </div>
         </div>
 
-        <div className="card mx-auto my-2" style={{ width: "18rem" }}>
+        <div className="card mx-auto my-2 card-hover-effect" style={{ width: "18rem" }}>
           <img className="card-img-top" src={pooja} alt="Card image cap" />
           <div className="card-body">
             <h5 className="card-title">Pooja Verma</h5>
@@ -50,7 +53,7 @@ export default function () {
           </div>
         </div>
 
-        <div className="card mx-auto my-2" style={{ width: "18rem" }}>
+        <div className="card mx-auto my-2 card-hover-effect" style={{ width: "18rem" }}>
           <img className="card-img-top" src={chander} alt="Card image cap" />
           <div className="card-body">
             <h5 className="card-title">Chander Mohan</h5>
@@ -62,7 +65,7 @@ export default function () {
           </div>
         </div>
 
-        <div className="card mx-auto my-2" style={{ width: "18rem" }}>
+        <div className="card mx-auto my-2 card-hover-effect" style={{ width: "18rem" }}>
           <img className="card-img-top" src={surbhi} alt="Card image cap" />
           <div className="card-body">
             <h5 className="card-title">Surbhi Kshyap</h5>

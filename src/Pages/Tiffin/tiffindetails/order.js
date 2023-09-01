@@ -21,6 +21,8 @@ const Order = () => {
   const [totalPrice, setTotalPrice] = useState("");
   const [address, setAddress] = useState([]);
 
+  const [myObject, setMyObject] = useState({});
+  var aaa = [];
   useEffect(() => {
     const { tiffin } = state;
     setName(tiffin.tiffinName);
@@ -114,12 +116,21 @@ const Order = () => {
       .get(url, { headers: { Authorization: `Bearer ${localStorage["jwt"]}` } })
       .then((response) => {
         const result = response.data;
-        if (result != null) {
-          setAddress(result);
-          console.log(result);
+
+        // Log the received data to see its structure
+
+        // Check if the data is an array and use map
+        if (Array.isArray(result["data"])) {
+          setAddress(result["data"]);
+          console.log("Result ", address);
         } else {
-          toast.error("something went wrong..");
+          // Handle the case where data is not an array (if needed)
+          console.error("Received data is not an array.");
         }
+      })
+      .catch((error) => {
+        console.error("Error fetching addresses:", error);
+        toast.error("Failed to fetch addresses");
       });
   };
 
@@ -201,7 +212,22 @@ const Order = () => {
               name="order_endDate"
             />
           </div>
-
+          <div className="mb-3">
+            <select className="bg-white form-control" name="user_address">
+              <option className="bg-white " value="Select Address">
+                Select Address
+              </option>
+              <option value="Jalgaon">Jalgaon</option>
+              <option value="Bhusawal">Bhusawal</option>
+              <option value="Kadgaon">Kadgaon</option>
+              <option value="Jalgaon">Jalgaon</option>
+              {/* {address.map((item, index) => (
+                <option key={index} value={item}>
+                  {item}
+                </option>
+              ))} */}
+            </select>
+          </div>
           <div className="mb-3">
             <label
               htmlFor=""

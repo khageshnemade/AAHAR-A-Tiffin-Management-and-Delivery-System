@@ -32,15 +32,19 @@ const TiffinCard = ({ tiffin }) => {
 
   return (
     <div>
-      <hr />
+      <div
+        style={{ height: "4px", width: "100", backgroundColor: "red" }}
+      ></div>
 
       <h1
-        className="text-center text-white heading"
+        className="text-center text-white heading mb-0"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
       >
         Tiffins List
       </h1>
-      <hr />
+      <div
+        style={{ height: "4px", width: "100", backgroundColor: "red" }}
+      ></div>
       <br />
 
       <br />

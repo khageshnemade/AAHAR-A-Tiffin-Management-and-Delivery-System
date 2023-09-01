@@ -12,6 +12,7 @@ import Help from "../../Components/Help";
 import DeliveryMarquee from "./DeliveryMarquee";
 import delivery from "./delivery2.jpg";
 import CustomerReview from "./CustomerReview";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -43,7 +44,7 @@ const Home = () => {
       <br />
       <br />
       <br />
-      
+
       <CustomerReview />
 
       <a
@@ -53,6 +54,14 @@ const Home = () => {
       >
         GoToTop
       </a>
+
+      <Link
+        to="/locate"
+        className="fixed-bottom btn btn-success text-white mx-auto"
+        style={{ width: "100px" }}
+      >
+        Location
+      </Link>
 
       <Footcomponent />
     </div>
