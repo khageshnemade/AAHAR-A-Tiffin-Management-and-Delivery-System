@@ -1,6 +1,8 @@
 package com.app.services;
 
 import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,11 +27,17 @@ public class UserAddressService {
 	
 	
 	
-	public UserAddressDto findByUserId(int userId) {
-		UserAddress userAddress = userAddressDao.findByUserId(userId);
-		if(userAddress==null) return null;
-		return converter.toUserAddressDto(userAddress);
+	public List<UserAddressDto> findByUserId(int userId) {
+	    List<UserAddress> userAddresses = userAddressDao.findByUserId(userId);
+	    List<UserAddressDto> dtos = new LinkedList<>();
+
+	    for (UserAddress userAddress : userAddresses) {
+	        dtos.add(converter.toUserAddressDto(userAddress));
+	    }
+
+	    return dtos;
 	}
+
 	
 	public Map<String, Object> addUserAddress(UserAddressDto dto){
 		UserAddress entity = converter.toUserAddress(dto);

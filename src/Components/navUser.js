@@ -16,7 +16,12 @@ const NavUser = () => {
   return (
     <nav
       className="navbar navbar-expand-lg navbar-light bg-grey"
-      style={{ backgroundColor: "#4caf95" }}
+      style={{
+        backgroundColor: "#4caf95",
+        width: "100",
+        position: "fixed",
+        top: "5px",
+      }}
     >
       <a
         className="navbar-brand hov"

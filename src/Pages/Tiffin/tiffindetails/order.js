@@ -22,7 +22,7 @@ const Order = () => {
   const [address, setAddress] = useState([]);
 
   const [myObject, setMyObject] = useState({});
-  var aaa = [];
+ 
   useEffect(() => {
     const { tiffin } = state;
     setName(tiffin.tiffinName);
@@ -111,29 +111,22 @@ const Order = () => {
   };
 
   const getaddress = () => {
-    const url = config.serverURL + `/deliveryAddress`;
+    const url = config.serverURL + "/deliveryAddress";
+
     axios
-      .get(url, { headers: { Authorization: `Bearer ${localStorage["jwt"]}` } })
+      .get(url, {
+        headers: { Authorization: `Bearer ${localStorage["jwt"]}` },
+      })
       .then((response) => {
         const result = response.data;
-
-        // Log the received data to see its structure
-
-        // Check if the data is an array and use map
-        if (Array.isArray(result["data"])) {
-          setAddress(result["data"]);
-          console.log("Result ", address);
-        } else {
-          // Handle the case where data is not an array (if needed)
-          console.error("Received data is not an array.");
-        }
+        setAddress(result.data);
       })
       .catch((error) => {
         console.error("Error fetching addresses:", error);
         toast.error("Failed to fetch addresses");
       });
   };
-
+  console.log(address);
   const diff = () => {
     var d1 = new Date(startDate);
     var d2 = new Date(endDate);
@@ -167,6 +160,7 @@ const Order = () => {
           <div style={{ paddingTop: "30px" }} className="mb-3">
             EmailId:
             <input
+              onChange={(e) => e.preventDefault()}
               value={Cookies.get("email")}
               type="text"
               className="form-control"
@@ -213,19 +207,20 @@ const Order = () => {
             />
           </div>
           <div className="mb-3">
-            <select className="bg-white form-control" name="user_address">
+            <select
+              className="bg-white form-control"
+              name="user_address"
+              onChange={(e) => e.preventDefault()}
+            >
               <option className="bg-white " value="Select Address">
                 Select Address
               </option>
-              <option value="Jalgaon">Jalgaon</option>
-              <option value="Bhusawal">Bhusawal</option>
-              <option value="Kadgaon">Kadgaon</option>
-              <option value="Jalgaon">Jalgaon</option>
-              {/* {address.map((item, index) => (
-                <option key={index} value={item}>
-                  {item}
+
+              {address.map((item, index) => (
+                <option key={index} value={item.city}>
+                  {item.city}
                 </option>
-              ))} */}
+              ))}
             </select>
           </div>
           <div className="mb-3">

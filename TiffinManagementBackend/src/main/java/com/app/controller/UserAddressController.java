@@ -1,6 +1,7 @@
 package com.app.controller;
 
 import java.security.Principal;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +27,10 @@ public class UserAddressController {
 	@GetMapping("/user/userAddress/{id}")
 	public ResponseEntity<?> displayUserAddressByUserId(@PathVariable("id") int id) {
 		System.out.println(id);
-		UserAddressDto userAddressDto = userAddressService.findByUserId(id);
+		List<UserAddressDto> userAddressDto = userAddressService.findByUserId(id);
 		if (userAddressDto == null)
 			return Response.error("Please add Address");
+		System.out.println(userAddressDto);
 		return Response.success(userAddressDto);
 	}
 	@PostMapping("/user/userAddress/add")

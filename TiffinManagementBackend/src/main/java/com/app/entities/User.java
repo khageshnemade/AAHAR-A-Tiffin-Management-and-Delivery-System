@@ -51,9 +51,9 @@ public class User {
 	@OneToMany(mappedBy = "deliveryBoy")
 	private List<DaywiseOrder> daywiseOrder;
 
-	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "userId")
-	private UserAddress userAddress;
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+	private List<UserAddress> userAddresses;
+
 
 	
 	
@@ -185,15 +185,25 @@ public class User {
 
 
 
-	public UserAddress getUserAddress() {
-		return userAddress;
+
+
+
+
+	public List<UserAddress> getUserAddresses() {
+		return userAddresses;
 	}
 
 
 
-	public void setUserAddress(UserAddress userAddress) {
-		this.userAddress = userAddress;
+
+
+
+
+	public void setUserAddresses(List<UserAddress> userAddresses) {
+		this.userAddresses = userAddresses;
 	}
+
+
 
 	
 	

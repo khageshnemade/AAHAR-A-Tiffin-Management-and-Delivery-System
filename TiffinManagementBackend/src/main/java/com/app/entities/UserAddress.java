@@ -33,7 +33,8 @@ public class UserAddress {
 	@Column(name = "address_line1")
 	private String addressLine;
 
-	@OneToOne(mappedBy = "userAddress",fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "user_id", insertable = false, updatable = false)
 	private User user;
 
 	@ManyToOne(fetch = FetchType.LAZY)

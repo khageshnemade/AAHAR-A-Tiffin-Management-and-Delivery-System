@@ -38,6 +38,11 @@ public class UserAddressDto {
 	public void setLocationId(int locationId) {
 		this.locationId = locationId;
 	}
+	@Override
+	public String toString() {
+		return "UserAddressDto [addressId=" + addressId + ", userId=" + userId + ", addressLine=" + addressLine
+				+ ", locationId=" + locationId + "]";
+	}
 
 	
 	

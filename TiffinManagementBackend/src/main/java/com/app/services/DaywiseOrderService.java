@@ -162,7 +162,7 @@ public class DaywiseOrderService {
 		List<AssignDeliveryBoy> assignd = new ArrayList<AssignDeliveryBoy>();
 		for (DaywiseOrder d : daywiseorder) {
 			if (d.getStatus().equals("pending")) {
-				UserAddress ud = userAddressdao.findByUserId(d.getOrder().getUser().getUserId());
+				UserAddress ud = userAddressdao.findByUserId(d.getOrder().getUser().getUserId()).get(0);
 
 				AssignDeliveryBoy a = new AssignDeliveryBoy(d.getDoId(), d.getOrder().getUser().getUserName(),
 						d.getOrder().getOrderId(), ud.getAddressLine(), ud.getDeliveryAddress().getDeliveryArea(),
@@ -203,7 +203,7 @@ public class DaywiseOrderService {
 		List<AssignDeliveryBoy> dblist = new ArrayList<AssignDeliveryBoy>();
 		for (DaywiseOrder d : dayorders) {
 			if (d.getDeliveryBoy()!=null && d.getDeliveryBoy().getUserId() == userId && d.getStatus().equals("dispatched")) {
-				UserAddress ud = userAddressdao.findByUserId(d.getOrder().getUser().getUserId());
+				UserAddress ud = userAddressdao.findByUserId(d.getOrder().getUser().getUserId()).get(0);
 
 				AssignDeliveryBoy a = new AssignDeliveryBoy(d.getDoId(), d.getOrder().getUser().getUserName(),
 						d.getOrder().getOrderId(), ud.getAddressLine(), ud.getDeliveryAddress().getDeliveryArea(),
@@ -229,7 +229,7 @@ public class DaywiseOrderService {
 //		System.out.println(daywiseorder);
 		for (DaywiseOrder d : daywiseorder) {
 			if (d.getStatus().equals("dispatched")) {
-				UserAddress ud = userAddressdao.findByUserId(d.getOrder().getUser().getUserId());
+				UserAddress ud = userAddressdao.findByUserId(d.getOrder().getUser().getUserId()).get(0);
 
 				AssignDeliveryBoy a = new AssignDeliveryBoy(d.getDoId(), d.getOrder().getUser().getUserName(),
 						d.getOrder().getOrderId(), ud.getAddressLine(), ud.getDeliveryAddress().getDeliveryArea(),
@@ -275,7 +275,7 @@ public class DaywiseOrderService {
 		List<AssignDeliveryBoy> assignd = new ArrayList<AssignDeliveryBoy>();
 		for (DaywiseOrder d : daywiseorder) {
 			if (d.getStatus().equals("Delivered")) {
-				UserAddress ud = userAddressdao.findByUserId(d.getOrder().getUser().getUserId());
+				UserAddress ud = userAddressdao.findByUserId(d.getOrder().getUser().getUserId()).get(0);
 
 				AssignDeliveryBoy a = new AssignDeliveryBoy(d.getDoId(), d.getOrder().getUser().getUserName(),
 						d.getOrder().getOrderId(), ud.getAddressLine(), ud.getDeliveryAddress().getDeliveryArea(),
