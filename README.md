@@ -44,3 +44,120 @@ docker save -o <file_name.tar> <image_name>
 docker load -i <file_name.tar>
 docker run <image_name>
 ```
+## Appendix 2
+### Project WebBrowser Images
+
+###  2.1 Homepage:
+ 
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/25a976dc-38ec-4796-998e-da83c7db352d)
+
+
+###  2.2 Login Page: 
+ ![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/867a5f94-c720-46bb-99cc-f72e6c5cbde4)
+
+
+
+
+
+
+###  2.3 Registration Page: 
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/a289ccfb-3e6e-459f-8df2-395a3e8eda67)
+
+ 
+
+###  2.4 User Tiffin Order:
+
+ 
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/a9af3a73-6c32-4085-9502-826fc056a3d0)
+
+
+
+
+###  2.5 User Profile Edit:
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/08cdf490-132b-49d4-bc94-33dde608b12a)
+
+ 
+
+###  2.6 Order Details :
+ ![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/6e3744e6-d5d8-4213-bfe3-d2c222520f2e)
+
+
+
+###  2.7 Payment Gateway:
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/c0943e5a-302e-47ab-8a30-858d5a5cb959)
+
+ 
+
+###  2.8 Admin Dashboard: 
+
+ ![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/3ab76b17-90fd-45d0-8732-87742ea5d2f6)
+
+
+ 
+###  2.9 Management of Tiffin:
+ 
+
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/426982d6-be69-4fc5-ab1e-966700d7fa16)
+
+###  2.10 Add New Tiffin:
+ 
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/281f68fa-74ff-46cf-b15c-be82a0ae363b)
+
+
+
+
+
+
+
+
+
+###  2.11 Add New Delivery Area:
+
+ ![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/4d0324dd-2c3c-4404-987e-2fc06b1bc426)
+
+
+
+
+###  2.12 Delivery Address List:
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/48f5290d-e2be-42ed-9ff2-15848cfb7d31)
+
+ 
+
+
+
+###  2.13 Users List:
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/3fa08d64-b6ea-4a03-aadc-4f220d0b89fc)
+
+ 
+
+
+
+
+###  2.14 Active Customer List:
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/c8a7961e-c505-4a2e-8cf2-67d78c4f4460)
+
+ 
+
+
+
+
+###  2.15 Assign Delivery Boy: 
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/eff327c7-c5b9-4c5b-b215-ff791d6c4cfa)
+
+ 
+
+###  2.16 Dispatched Orders:
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/27c14c9a-9fb0-443c-88e7-1a78c440cd8b)
+
+ 
+
+###  2.17 Delivering Tiffin Orders (Delivery Boy):
+![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/30f728bd-2aa1-40d4-bd1c-e56b295d1b19)
+
+ 
+
+###  2.18 Delivered Orders:
+
+ ![image](https://github.com/khageshnemade/AAHAR-A-Tiffin-Management-and-Delivery-System/assets/128049399/2eb8a54c-554a-44f1-84bb-a9e26b776f8f)
+
+
