@@ -1,0 +1,44 @@
+Amazon RDS Details
+-----------------------------------
+hostname-mainproject.cdckclb9keir.ap-south-1.rds.amazonaws.com
+password-Khagesh123
+username-root
+
+Change inbound rules to public
+
+
+Now Add EC_2 instance 
+EC2 instance hostname-3.110.151.14//change this with new hostname
+springboot port running on -8082
+
+This command is useful to copy files from our local pc to aws EC-2 instance
+------------------------------------------
+scp -i D:/Old/Downloads/ubuntupem.pem D:/CDAC/Project/Final/TiffinManagementBackend.jar ubuntu@ec2-3-110-151-14.ap-south-1.compute.amazonaws.com:/home/ubuntu/main_project
+
+
+
+
+Save this as a Policy for s3
+------------------------------------
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::yourbucketname/*"
+        }
+    ]
+}
+
+
+aws s3 sync build/ s3://aaharproject
+
+
+npm run build  ------------To Build npm build
+npx serve -s build ---To Check site build
+
